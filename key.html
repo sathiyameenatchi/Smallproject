@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Key Press Detection</title>
+
+<script>
+document.addEventListener("keydown", function(event) {
+    if (event.code === "Space") {
+        alert("Thank You..!!");
+        window.close(); // closes the current window
+    } else {
+        alert("Invalid Key Pressed");
+    }
+});
+</script>
+
+</head>
+
+<body>
+
+<h2>Press any key</h2>
+<p>Press **Spacebar** to see the Thank You message and close the window. Press any other key to see an invalid key alert.</p>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Full Screen Example</title>
+
+<script>
+function openFullscreen() {
+    let elem = document.documentElement; // entire HTML page
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+
+function closeFullscreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Full Screen Example</h2>
+
+<button onclick="openFullscreen()">Go Full Screen</button>
+<button onclick="closeFullscreen()">Exit Full Screen</button>
+
+<p>Click "Go Full Screen" to expand the page to full screen. Click "Exit Full Screen" to return.</p>
+
+</body>
+</html>

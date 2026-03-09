@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decimal Converter</title>
+
+<script>
+function convertNumber() {
+    var num = document.getElementById("number").value;
+
+    var binary = parseInt(num).toString(2);
+    var hex = parseInt(num).toString(16);
+
+    document.getElementById("bin").innerHTML = binary;
+    document.getElementById("hex").innerHTML = hex;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Decimal to Binary / Hexadecimal</h2>
+
+Enter Decimal Number:
+<input type="number" id="number">
+
+<button onclick="convertNumber()">Convert</button>
+
+<p>Binary: <span id="bin"></span></p>
+<p>Hexadecimal: <span id="hex"></span></p>
+
+</body>
+</html>

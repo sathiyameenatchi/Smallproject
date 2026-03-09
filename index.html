@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over Color Change</title>
+    <script>
+    function changeColor() {
+        document.getElementById("text").style.color = "red";
+    }
+
+    function normalColor() {
+        document.getElementById("text").style.color = "black";
+    }
+    </script>
+</head>
+
+<body>
+
+<h1>Welcome to My Website</h1>
+
+<!-- Anchor tags -->
+<a href="char.html">Characteristics</a><br><br>
+<a href="edit.html">Edit</a><br><br>
+<a href="form.html">Form Validation</a><br><br>
+<a href="mouse.html">Mouse Coordinates</a><br><br>
+<a href="prompt.html">Prompt Example</a><br><br>
+<a href="number.html">Select Example</a><br><br>
+<a href="key.html">Style Example</a><br><br>
+<a href="full.html">Event Example</a><br><br>
+
+<h2>Move the mouse over the text</h2>
+
+<div id="text" onmouseover="changeColor()" onmouseout="normalColor()">
+    Welcome to HTML CSS JavaScript
+</div>
+
+</body>
+</html>
