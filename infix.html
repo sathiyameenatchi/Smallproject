@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Infix Calculator</title>
+
+<script>
+function calculate()
+{
+    var exp = document.getElementById("expression").value;
+    var result = eval(exp);
+    document.getElementById("result").value = result;
+}
+</script>
+
+</head>
+
+<body>
+
+<h3>Infix Expression Calculator</h3>
+
+Enter Expression:
+<input type="text" id="expression">
+
+<br><br>
+
+<input type="button" value="Calculate" onclick="calculate()">
+
+<br><br>
+
+Result:
+<input type="text" id="result">
+
+</body>
+</html>

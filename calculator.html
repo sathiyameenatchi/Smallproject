@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Calculator</title>
+<style>
+body{
+    font-family: Arial;
+}
+button{
+    width:50px;
+    height:40px;
+    margin:5px;
+    font-size:18px;
+}
+#display{
+    width:215px;
+    height:40px;
+    font-size:20px;
+    margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<input type="text" id="display" readonly><br>
+
+<!-- Number Buttons -->
+<button class="num">1</button>
+<button class="num">2</button>
+<button class="num">3</button>
+
+<button onclick="appendOp('+')">+</button><br>
+
+<button class="num">4</button>
+<button class="num">5</button>
+<button class="num">6</button>
+
+<button onclick="appendOp('-')">-</button><br>
+
+<button class="num">7</button>
+<button class="num">8</button>
+<button class="num">9</button>
+
+<button onclick="appendOp('*')">*</button><br>
+
+<button class="num">0</button>
+<button onclick="clearDisplay()">C</button>
+<button onclick="calculate()">=</button>
+<button onclick="appendOp('/')">/</button>
+
+<script>
+
+let display = document.getElementById("display");
+
+/* DOM EVENT for numbers */
+let numbers = document.querySelectorAll(".num");
+
+numbers.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        display.value += btn.textContent;
+    });
+});
+
+/* operators */
+function appendOp(op){
+    display.value += op;
+}
+
+function clearDisplay(){
+    display.value = "";
+}
+
+function calculate(){
+    display.value = eval(display.value);
+}
+
+</script>
+
+</body>
+</html>
